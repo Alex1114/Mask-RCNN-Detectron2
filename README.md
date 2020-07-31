@@ -81,7 +81,12 @@ You might need to adjust some of the following instructions depending on your Py
   ```  
     
 Check your system can use cv_bridge in python3 (import getCvType).
-  
+  ```Shell
+  python3  
+    
+  from cv_bridge.boost.cv_bridge_boost import getCvType  
+  ```
+
 ![python3_cv](figures/python3_cv.png)
   
   
@@ -102,3 +107,5 @@ Check your system can use cv_bridge in python3 (import getCvType).
   ```
 
 ![prtdict in rviz](figures/MaskRCNN-predict.gif)
+
+

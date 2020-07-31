@@ -167,12 +167,8 @@ class CvBridge(object):
             im = np.ndarray(shape=(img_msg.height, img_msg.width),
                            dtype=dtype, buffer=img_msg.data)
         else:
-            if(type(img_msg.data) == str):
-                im = np.ndarray(shape=(img_msg.height, img_msg.width, n_channels),
-                               dtype=dtype, buffer=img_msg.data.encode())
-            else:
-                im = np.ndarray(shape=(img_msg.height, img_msg.width, n_channels),
-                               dtype=dtype, buffer=img_msg.data)
+            im = np.ndarray(shape=(img_msg.height, img_msg.width, n_channels),
+                           dtype=dtype, buffer=img_msg.data)
         # If the byt order is different between the message and the system.
         if img_msg.is_bigendian == (sys.byteorder == 'little'):
             im = im.byteswap().newbyteorder()
