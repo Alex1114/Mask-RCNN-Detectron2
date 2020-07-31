@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<launch>
+  <include file="$(find realsense2_camera)/launch/rs_aligned_depth.launch">
+		<arg name="color_width" value="640"/>
+		<arg name="color_height" value="480"/>
+  </include>
+
+  <node pkg="rcnn_pkg" type="rcnn_detection.py" name="MaskRCNN_detection" output="screen"/>
+</launch>
